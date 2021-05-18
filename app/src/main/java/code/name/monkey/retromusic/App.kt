@@ -54,11 +54,6 @@ class App : MultiDexApplication() {
                 override fun onProductPurchased(productId: String, details: TransactionDetails?) {}
 
                 override fun onPurchaseHistoryRestored() {
-                    Toast.makeText(
-                        this@App,
-                        R.string.restored_previous_purchase_please_restart,
-                        Toast.LENGTH_LONG
-                    ).show()
                 }
 
                 override fun onBillingError(errorCode: Int, error: Throwable?) {}

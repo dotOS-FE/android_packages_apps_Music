@@ -17,7 +17,6 @@
 
         <include layout="@layout/card_credit" />
 
-        <include layout="@layout/card_social" />
     </LinearLayout>
 
     <LinearLayout

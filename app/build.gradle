@@ -9,7 +9,7 @@ android {
     buildToolsVersion = '29.0.3'
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 29
         targetSdkVersion 29
 
         renderscriptTargetApi 29 //must match target sdk and build tools
@@ -24,12 +24,18 @@ android {
         buildConfigField("String", "GOOGLE_PLAY_LICENSING_KEY", "\"${getProperty(getProperties('../public.properties'), 'GOOGLE_PLAY_LICENSE_KEY')}\"")
     }
     signingConfigs {
-        release {
-            Properties properties = getProperties('/Users/apple/Documents/Github/music.jks')
-            storeFile file(getProperty(properties, 'storeFile'))
-            keyAlias getProperty(properties, 'keyAlias')
-            storePassword getProperty(properties, 'storePassword')
-            keyPassword getProperty(properties, 'keyPassword')
+        defaultConfig {
+            storeFile file('../platform.keystore')
+            storePassword 'password'
+            keyAlias 'platform'
+            keyPassword 'password'
+        }
+
+        debugConfig {
+            storeFile file('../platform.keystore')
+            storePassword 'password'
+            keyAlias 'platform'
+            keyPassword 'password'
         }
     }
     buildTypes {
@@ -38,7 +44,7 @@ android {
             minifyEnabled true
             //shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.defaultConfig
         }
         debug {
             applicationIdSuffix '.debug'
@@ -95,6 +101,7 @@ static def getDate() {
 
 dependencies {
     implementation project(':appthemehelper')
+    compileOnly fileTree(dir: 'system_libs/', include: ['*.jar'])
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation "androidx.gridlayout:gridlayout:1.0.0"
     implementation "androidx.cardview:cardview:1.0.0"

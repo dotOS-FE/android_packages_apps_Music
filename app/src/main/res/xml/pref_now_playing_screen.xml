@@ -4,24 +4,24 @@
 
     <code.name.monkey.retromusic.preferences.NowPlayingScreenPreference
         android:key="now_playing_screen_id"
-        android:layout="@layout/list_item_view"
+        android:layout="@layout/dot_preference"
         android:title="@string/pref_title_now_playing_screen_appearance"
         app:icon="@drawable/ic_play_circle_filled" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
         android:key="extra_song_info"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_extra_song_info"
         android:title="@string/pref_title_extra_song_info" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
-        android:layout="@layout/preference_category_title"
+        android:layout="@layout/dot_preference_category"
         android:title="@string/pref_header_album">
 
         <code.name.monkey.retromusic.preferences.AlbumCoverStylePreference
             android:key="album_cover_style_id"
-            android:layout="@layout/list_item_view"
+            android:layout="@layout/dot_preference"
             android:title="@string/pref_title_album_cover_style"
             app:icon="@drawable/ic_image" />
 
@@ -30,11 +30,11 @@
             android:entries="@array/pref_album_cover_transform_entities"
             android:entryValues="@array/pref_album_cover_transform_values"
             android:key="album_cover_transform"
-            android:layout="@layout/list_item_view"
+            android:layout="@layout/dot_preference"
             android:title="@string/pref_title_album_cover_transform" />
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:layout="@layout/list_item_view_switch"
+            android:layout="@layout/dot_preference"
             app:defaultValue="false"
             app:icon="@drawable/ic_view_carousel"
             app:key="carousel_effect"
@@ -43,11 +43,11 @@
     </code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory>
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreferenceCategory
-        android:layout="@layout/preference_category_title"
+        android:layout="@layout/dot_preference_category"
         android:title="@string/pref_header_controls">
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:layout="@layout/list_item_view_switch"
+            android:layout="@layout/dot_preference"
             app:defaultValue="false"
             app:icon="@drawable/ic_play_arrow_white_32dp"
             app:key="toggle_add_controls"
@@ -56,7 +56,7 @@
 
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:layout="@layout/list_item_view_switch"
+            android:layout="@layout/dot_preference"
             app:defaultValue="false"
             app:icon="@drawable/ic_volume_up"
             app:key="toggle_volume"
@@ -64,7 +64,7 @@
             app:title="@string/pref_title_toggle_volume" />
 
         <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
-            android:layout="@layout/list_item_view_switch"
+            android:layout="@layout/dot_preference"
             app:defaultValue="false"
             app:icon="@drawable/ic_expand_less"
             app:key="expand_now_playing_panel"

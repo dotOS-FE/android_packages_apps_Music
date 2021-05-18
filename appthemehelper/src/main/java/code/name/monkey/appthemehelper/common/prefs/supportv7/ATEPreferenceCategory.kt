@@ -30,7 +30,7 @@ class ATEPreferenceCategory @JvmOverloads constructor(
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindViewHolder(holder)
-        val title = holder.itemView.findViewById<TextView>(android.R.id.title)
+        val title: TextView = holder.findViewById(android.R.id.title) as TextView
         title.setTextColor(ThemeStore.accentColor(context))
     }
 }

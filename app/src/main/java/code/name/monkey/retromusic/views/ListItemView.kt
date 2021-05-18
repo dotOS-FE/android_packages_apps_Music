@@ -52,7 +52,6 @@ class ListItemView : FrameLayout {
         if (typedArray.hasValue(R.styleable.ListItemView_listItemIcon)) {
             icon.setImageDrawable(typedArray.getDrawable(R.styleable.ListItemView_listItemIcon))
         } else {
-
             icon.hide()
         }
 

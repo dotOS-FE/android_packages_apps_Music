@@ -83,14 +83,7 @@ class PurchaseActivity : AbsBaseActivity(), BillingProcessor.IBillingHandler {
 
     override fun onPurchaseHistoryRestored() {
         if (App.isProVersion()) {
-            Toast.makeText(
-                this,
-                R.string.restored_previous_purchase_please_restart,
-                Toast.LENGTH_LONG
-            ).show()
             setResult(RESULT_OK)
-        } else {
-            Toast.makeText(this, R.string.no_purchase_found, Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -27,42 +27,57 @@
     app:layout_constraintStart_toStartOf="parent"
     tools:ignore="PrivateResource">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@android:id/icon"
+    <LinearLayout
+        android:id="@android:id/icon_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="@android:id/title"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@android:id/title"
-        app:tint="?attr/colorControlNormal"
-        tools:srcCompat="@drawable/ic_telegram_white" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@android:id/title"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@android:id/icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:adjustViewBounds="true"
+            android:padding="6dp"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextViewSubtitle1"
+        android:layout_weight="1"
         app:layout_constrainedWidth="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline_front_margin"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:maxLines="@string/grid_size_1"
-        tools:text="@tools:sample/lorem/random" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <code.name.monkey.retromusic.views.BaselineGridTextView
-        android:id="@android:id/summary"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:textColor="?android:attr/textColorSecondary"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline_front_margin"
-        app:layout_constraintTop_toBottomOf="@android:id/title"
-        android:textAppearance="@style/TextViewNormal"
-        tools:maxLines="2"
-        tools:text="@tools:sample/lorem/random" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:textSize="17sp" />
+
+        <code.name.monkey.retromusic.views.BaselineGridTextView
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_alignStart="@android:id/title"
+            android:maxLines="10"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:textColor="?android:attr/textColorSecondary"
+            android:layout_marginTop="2dp" />
+
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_front_margin"

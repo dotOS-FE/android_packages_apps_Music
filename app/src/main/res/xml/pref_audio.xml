@@ -5,7 +5,7 @@
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="true"
         android:key="audio_ducking"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_audio_ducking"
         android:title="@string/pref_title_audio_ducking"
         app:icon="@drawable/ic_volume_down" />
@@ -13,20 +13,20 @@
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
         android:key="gapless_playback"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_gapless_playback"
         android:title="@string/pref_title_gapless_playback" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATEPreference
         android:key="equalizer"
-        android:layout="@layout/list_item_view_no_title"
+        android:layout="@layout/dot_preference"
         android:title="@string/equalizer"
         app:icon="@drawable/ic_equalizer" />
 
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
         android:key="toggle_headset"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_toggle_headset"
         android:title="@string/pref_title_toggle_toggle_headset"
         app:icon="@drawable/ic_play_arrow_white_32dp" />
@@ -34,7 +34,7 @@
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
         android:key="toggle_shuffle"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_toggle_shuffle"
         android:title="@string/pref_title_toggle_toggle_shuffle"
         app:icon="@drawable/ic_shuffle" />
@@ -42,7 +42,7 @@
     <code.name.monkey.appthemehelper.common.prefs.supportv7.ATESwitchPreference
         android:defaultValue="false"
         android:key="bluetooth_playback"
-        android:layout="@layout/list_item_view_switch"
+        android:layout="@layout/dot_preference"
         android:summary="@string/pref_summary_bluetooth_playback"
         android:title="@string/pref_title_bluetooth_playback" />
 
