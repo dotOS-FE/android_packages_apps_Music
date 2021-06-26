@@ -59,7 +59,7 @@ class LibraryFragment : AbsMainActivityFragment(R.layout.fragment_library) {
         val color = ThemeStore.accentColor(requireContext())
         val hexColor = String.format("#%06X", 0xFFFFFF and color)
         val appName = HtmlCompat.fromHtml(
-            "<span  style='color:$hexColor';>Music</span>",
+            "Fan<span  style='color:$hexColor';>Music</span>",
             HtmlCompat.FROM_HTML_MODE_COMPACT
         )
         appNameText.text = appName
